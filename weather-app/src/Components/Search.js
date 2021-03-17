@@ -1,11 +1,18 @@
 import React from 'react';
 
-const Search = (props) => {
-    return (
-        <div className={`ui inverted ${props.color} menu`}>
-            <input type="text" placeholder="Search by..."></input>
-        </div>
-    )
-}
 
-export default Search
+
+
+
+export default class Search extends React.Component {
+    render(){
+    return(
+        <div>
+            <div className={`ui inverted blue menu`}>
+                <input type="text" placeholder="Search by..."></input>
+                <button className={'ui red button'}> Search </button>
+            </div>
+        </div>
+        
+    )}
+}

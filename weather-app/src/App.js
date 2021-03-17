@@ -1,13 +1,18 @@
 import './App.css';
-import Search from './Components/Search.js'
+import React from 'react';
+import Search from './Components/Search'
+
 
 
 function App() {
+  
   return (
     <div className="App">
-      <Search color="blue" title="Search" />
+      <Search />
     </div>
   );
 }
+
+
 
 export default App;

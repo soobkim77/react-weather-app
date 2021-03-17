@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class WeatherFetch extends React.Component {
+export default class WeatherFetch extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -9,12 +9,17 @@ export class WeatherFetch extends React.Component {
         items: []
       };
     }
+
+    fetchWeather(){
+        this.componentDidMount()
+    }
   
     componentDidMount() {
-      fetch("https://api.example.com/items")
+      fetch("http://api.openweathermap.org/data/2.5/weather?q=Seattle&appid=354b57b00d3c4c36a397e332c0da98fa")
         .then(res => res.json())
         .then(
           (result) => {
+              console.log(result)
             this.setState({
               isLoaded: true,
               items: result.items
